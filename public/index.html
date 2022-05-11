@@ -22,6 +22,18 @@
     <style>
         #map { height: 600px;
         background-color: #ccc; }
+
+        #map::before{
+            content: 'Loading';
+            font-size: 5em;
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            margin-top: 2em;
+        }
+        .leaflet-popup-content-wrapper{
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -29,17 +41,16 @@
     <div class="row" style="height:40px">
         <form>
             <select id="business">
-                <option value="restaurant">Restaurants</option>
+                <option value="restaurant" selected>Restaurants</option>
                 <option value="coffee">Coffee Shops</option>
                 <option value="hotel">Hotels</option>
                 <option value="market">Markets</option>
             </select>
-            <button id="submit">Submit</button>
+            <button type="button" id="submit">Submit</button>
         </form>
     </div>
     
     <div class="row" id="map"></div>
-    <div class="row" style=""
     
 </body>
 </html>
